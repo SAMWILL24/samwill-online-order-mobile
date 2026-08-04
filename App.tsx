@@ -37,6 +37,7 @@ function Navigation() {
         screenOptions={{
           headerStyle: { backgroundColor: theme.surface },
           headerTitleStyle: { color: theme.text },
+          headerTintColor: theme.text,
           headerTitle: (props) => <HeaderTitle title={typeof props.children === 'string' ? props.children : ''} />,
           headerRight: () => <HeaderRight />,
         }}
@@ -51,7 +52,7 @@ function Navigation() {
         <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Register' }} />
         <Stack.Screen name="Account" component={AccountScreen} options={{ title: 'Account' }} />
       </Stack.Navigator>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </NavigationContainer>
   );
 }
